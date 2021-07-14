@@ -25,12 +25,10 @@ export default function Home({ session }) {
     .collection('docs');
 
   useEffect(() => {
-    docsRef
-    .get()
-    .then(shit => 
-      setDocs(shit.docs.map(doc => ({ id: doc.id, ...doc.data() })))
-    )
+    const unsub = docsRef
+    .orderBy('timestamp', 'desc').onSnapshot(querySnapshot => setDocs(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))))
 
+    return unsub
   }, [])
 
   const handleSubmit = (e) => {

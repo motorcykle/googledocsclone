@@ -6,6 +6,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import DescriptionIcon from '@material-ui/icons/Description';
 import TextEditor from '../../components/TextEditor';
 import { Button } from '@material-ui/core';
+import Loader from "react-loader-spinner";
 
 const Doc = ({ session }) => {
   const router = useRouter();
@@ -30,7 +31,7 @@ const Doc = ({ session }) => {
       })
       .catch(err => aler(err))
 
-  }, [id]);
+  }, [id, session]);
 
   return (
     <div>
@@ -61,7 +62,7 @@ const Doc = ({ session }) => {
         </div>
       </header>
 
-      <TextEditor />
+      {doc && <TextEditor doc={doc} />}
     </div>
   );
 }

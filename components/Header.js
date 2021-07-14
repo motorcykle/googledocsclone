@@ -5,10 +5,14 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import SearchIcon from '@material-ui/icons/Search';
 import AppsIcon from '@material-ui/icons/Apps';
 import { signOut } from 'next-auth/client';
+import { useSession } from 'next-auth/client';
 
 const Header = () => {
+  const [session] = useSession();
+
+
   return (
-    <header className="p-2 shadow-md sticky top-0  z-50">
+    <header className="p-2 shadow-md sticky top-0 bg-white z-50">
       <div className="grid grid-cols-4">
 
         <div className="flex items-center col-span-1">
@@ -40,7 +44,7 @@ const Header = () => {
             <AppsIcon />
           </IconButton>
           <IconButton onClick={signOut}>
-            <img src="https://i.ibb.co/hRqFXph/160573352-443970500228304-4805258586518520681-n.jpg" className=" rounded-full h-[24px] w-[24px] " alt="" />
+            <img src={session?.user.image} className=" rounded-full h-[24px] w-[24px] " alt="" />
           </IconButton>
         </div>
 
