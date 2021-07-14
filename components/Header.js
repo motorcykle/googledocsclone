@@ -8,7 +8,7 @@ import { signOut } from 'next-auth/client';
 
 const Header = () => {
   return (
-    <header className="p-2 shadow-md sticky top-0">
+    <header className="p-2 shadow-md sticky top-0  z-50">
       <div className="grid grid-cols-4">
 
         <div className="flex items-center col-span-1">

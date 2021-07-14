@@ -10,7 +10,7 @@ const DocumentRow = ({ doc }) => {
 
   return (
     <div onClick={() => router.push(`/doc/${doc?.id}`)} className="flex items-center p-4 rounded-lg hover:bg-gray-100 text-gray-700 cursor-pointer text-sm border mb-2">
-      <DescriptionIcon color="primary" />
+      <DescriptionIcon />
       <p className="flex-grow ml-5 w-10 mr-10 truncate">{doc?.fileName}</p>
       <p className="text-sm mr-6">{doc?.timestamp?.toDate().toLocaleDateString()}</p>
       <IconButton>
