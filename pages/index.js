@@ -90,7 +90,7 @@ export default function Home({ session }) {
       
       <ModalComponent />
 
-      <section className="bg-[#F0F3F4] py-5 text-gray-600 px-5 md:px-0">
+      <section className="bg-[#F0F3F4] py-5 text-gray-600 px-5">
         <div className="max-w-6xl mx-auto">
           
           <div className="flex justify-between items-center mb-3">
@@ -123,7 +123,7 @@ export default function Home({ session }) {
         </div>
       </section>
 
-      <section className="py-5 text-gray-600 px-5 md:px-0">
+      <section className="py-5 text-gray-600 px-5">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between pb-5 text-sm">
             <h2 className="font-medium flex-grow">My Documents</h2>

@@ -7,3 +7,12 @@
 .newDoc-btns .MuiButton-root svg {
   margin-left: 0.25em;
 }
+
+.idRight .MuiButton-root {
+  background-color: #2196f3;
+  color: whitesmoke;
+}
+
+.idRight .MuiButton-root svg {
+  margin-right: 0.25em;
+}
