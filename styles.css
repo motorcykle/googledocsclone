@@ -1,0 +1,9 @@
+.newDoc-btns .MuiButton-root {
+  text-transform: none !important;
+  font-weight: 400;
+  color: rgba(75, 85, 99);
+}
+
+.newDoc-btns .MuiButton-root svg {
+  margin-left: 0.25em;
+}
