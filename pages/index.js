@@ -26,7 +26,8 @@ export default function Home({ session }) {
 
   useEffect(() => {
     const unsub = docsRef
-    .orderBy('timestamp', 'desc').onSnapshot(querySnapshot => setDocs(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))))
+    .orderBy('timestamp', 'desc')
+    .onSnapshot(querySnapshot => setDocs(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))))
 
     return unsub
   }, [])
